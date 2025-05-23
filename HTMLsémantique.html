@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <title>HTML Sémantique</title>
+    <style>
+        /* Reset */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;            
+        }
+
+        html,
+        body {
+            height: 100%;
+            width: 100%;
+            font-size: 0;
+        }
+
+        body {
+            background-color: #f8f8f8;
+        }
+
+        /* Container principal */
+        .container {
+            display: flex;
+            flex-direction: column;
+            height: 100%;
+            width: 100%;
+            padding: 1%;
+        }
+
+        /* Header, Nav, Footer */
+        header {
+            background-color: #cce6ff;
+            height: 10%;
+            width: 100%;
+            padding: 1%;
+            
+            color: black;
+        }
+
+        nav {
+            background-color: #f9c2c2;
+            height: 5%;
+            width: 100%;
+            margin-top: 1%;
+        }
+
+        footer {
+            background-color: #c4f5d1;
+            height: 10%;
+            width: 100%;
+            padding: 1%;
+            margin-top: 1%;
+        }
+
+        /* Contenu principal (Aside + Main) */
+        .content {
+            display: flex;
+            flex: 1;
+            overflow: hidden;
+            margin-top: 1%;
+        }
+
+        /* Aside */
+        aside {
+            background-color: #fff4b2;
+            width: 25%;
+            height: 100%;
+            padding-right: 1%
+        }
+
+        /* Main */
+        main {
+            background-color: #fff3b0;
+            width: 75%;
+            height: 100%;
+            padding: 1%;
+            display: flex;
+            flex-direction: column;
+            gap: 2%;
+            overflow: auto;
+            margin-left: 1%;
+        }
+
+        /* Article */
+        article {
+            background-color: #ffffff;
+            flex: 2;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            padding: 1%;
+            gap: 2%;
+        }
+
+        article>header {
+            background-color: #ebf9c3;
+            flex: 1;
+            padding: 1%
+        }
+
+        figure {
+            background-color: #f9e79f;
+            flex: 1;
+            padding: 1%
+        }
+
+        p {
+            background-color: #fcd8d4;
+            flex: 1;
+            padding: 1%
+        }
+
+        article>footer {
+            background-color: #e2d6f3;
+            flex: 1;
+            padding: 1%
+        }
+
+        /* Section */
+        section {
+            background-color: white;
+            flex: 1;
+            padding: 1%;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <header>header</header>
+        <nav>&lt;nav&gt;</nav>
+        <div class="content">
+            <aside>&lt;aside&gt;</aside>
+            <main>&lt;main&gt;
+                <article>
+                    <header></header>
+                    <figure></figure>
+                    <p></p>
+                    <footer></footer>
+                </article>
+                <section></section>
+            </main>
+        </div>
+        <footer></footer>
+    </div>
+</body>
+
+</html>
