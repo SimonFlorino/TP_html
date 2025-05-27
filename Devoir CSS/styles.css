@@ -1,0 +1,162 @@
+:root {
+    --color_theme: #0097B2;
+    --color_font: white;
+    --color_grey: grey;
+    --color_black: #000000;
+    --font_family: Arial, Helvetica, sans-serif;
+}
+
+/* Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html,
+body {
+    height: auto;
+    width: 100%;
+    color: var(color_black);
+    background-color: white;
+    padding: 25px;
+    font-family: var(--font_family);
+}
+
+header {
+    display: flex;
+}
+
+header ul {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    gap: 50px;
+    list-style-type: none;
+    margin-top: 25px;
+}
+
+header nav {
+    padding: 25px;
+}
+
+.dot {
+    height: 75px;
+    width: 75px;
+    background-color: var(--color_theme);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.dot label {
+    color: var(--color_font);
+    font-size: 25px;
+}
+
+h1 {
+    font-size: 50px;
+}
+
+
+#img_logo {
+    width: 200px;
+    height: 200px;
+}
+
+#img_footer {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    position: relative;
+    top: -40px;
+}
+
+main{
+    width: 100%;
+}
+
+main p {
+    background-color: var(--color_grey);
+    border-radius: 50px;
+    width: 100%;
+    height: 50px;
+    color: var(--color_font);
+    display: flex;
+    align-items: center;
+    margin-top: 25px;
+}
+
+main p label {
+    margin-left: 15px;
+    font-size: 25px;
+}
+
+hr {
+    height: 5px;
+    background-color: var(--color_black);
+    margin-top: 50px;
+}
+
+footer {
+    height: 200px;
+    width: 100%;
+    background-color: var(--color_theme);
+    margin-top: 75px;
+}
+
+/* FORMAT TABLETTE */
+@media screen and (max-width: 900px) {
+    :root {
+        --color_theme: #00BF63;
+    }
+
+    #img_footer {
+        left: 45%;
+        position: relative;
+    }
+}
+
+/* FORMAT TELEPHONE */
+@media screen and (max-width: 720px) {
+    :root {
+        --color_theme: #FF66C4;
+    }
+
+    body {
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    header {
+        flex-direction: column;
+        align-items: center;
+        width: 50%;
+    }
+
+    header ul {
+        gap: 25px;
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+
+    #img_logo {
+        order: 3;
+    }
+
+    header nav {
+        text-align: center;
+    }
+
+    hr{
+        border: none;
+    }
+
+    footer{
+        height: 200px;
+    }
+
+}
